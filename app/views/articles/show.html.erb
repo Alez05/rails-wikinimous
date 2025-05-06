@@ -1,0 +1,29 @@
+<div class="container mt-5">
+  <div class="card shadow-lg p-4">
+    <h1 class="text-primary mb-3">
+      <i class="fa-solid fa-book-open"></i> Name of this article:
+    </h1>
+
+    <h2 class="text-dark">
+      <i class="fa-solid fa-heading"></i> <%= @article.title %>
+    </h2>
+
+    <h3 class="text-body-secondary mb-4">
+      <i class="fa-solid fa-align-left"></i> <%= @article.content %>
+    </h3>
+
+    <div class="d-flex gap-3">
+      <%= link_to edit_article_path(@article), class: "btn btn-outline-warning" do %>
+        <i class="fa-solid fa-pen-to-square"></i> Edit
+      <% end %>
+
+      <%= link_to article_path(@article), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn btn-outline-danger" do %>
+        <i class="fa-solid fa-trash"></i> Delete
+      <% end %>
+
+      <%= link_to articles_path, class: "btn btn-outline-secondary ms-auto" do %>
+        <i class="fa-solid fa-arrow-left"></i> Back
+      <% end %>
+    </div>
+  </div>
+</div>

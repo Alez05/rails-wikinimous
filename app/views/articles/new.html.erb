@@ -1,0 +1,16 @@
+<div class="container mt-5">
+  <div class="card shadow-lg- p-4">
+    <h1 class="mb-4 text-primary">
+      <i class="fa-solid fa-pen-to-square"></i>
+      New article
+    </h1>
+
+    <%= render "form" %>
+    <div class="mt-4">
+      <%= link_to articles_path, class: "btn btn-outline-secondary" do %>
+        <i class="fa-solid fa-arrow-left"></i>
+        Back to Home Page
+      <% end %>
+    </div>
+  </div>
+</div>
